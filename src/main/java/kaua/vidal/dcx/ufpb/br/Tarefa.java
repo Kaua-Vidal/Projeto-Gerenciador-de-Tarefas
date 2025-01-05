@@ -13,7 +13,7 @@ public class Tarefa {
     private Categoria categoria;
 
 
-    public Tarefa(String tituloTarefa, String descricaoTarefa, Data dataCriadaTarefa, Data dataFimTarefa) {
+    public Tarefa(String tituloTarefa, String descricaoTarefa, String prioridade, Categoria categoria, LocalDate prazo) {
         this.tituloTarefa = tituloTarefa;
         this.descricaoTarefa = descricaoTarefa;
         this.prazo = prazo;

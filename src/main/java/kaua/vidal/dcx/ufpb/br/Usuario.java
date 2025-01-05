@@ -33,6 +33,10 @@ public class Usuario {
         return this.nome;
     }
 
+    public String getEmail(){
+        return this.email;
+    }
+
     public boolean autenticarSenha(String senhaDigitada){
         return this.senha.equals(senhaDigitada);
     }
