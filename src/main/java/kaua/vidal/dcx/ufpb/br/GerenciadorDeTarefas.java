@@ -15,12 +15,14 @@ public class GerenciadorDeTarefas {
         this.usuarioLogado = null;
     }
 
-    public boolean cadastraUsuario(Usuario u){
+    public boolean cadastraUsuario(Usuario u) throws UsuarioJaCadastradoException{
         if (!usuarios.containsKey(u.getEmail())){
             usuarios.put(u.getEmail(), u);
             return true;
+        } else {
+            throw new UsuarioJaCadastradoException("Usuário já cadastrado");
         }
-        return false; //Colocar excessão
+
     }
 
     public boolean login(String email, String senha){
